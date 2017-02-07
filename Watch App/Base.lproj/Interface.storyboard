@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="uSE-Hz-UZ2">
+                            <items>
+                                <tableRow identifier="tableRowController" id="64Y-AZ-vPc" customClass="tableRowController" customModule="Watch_App_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="ryx-Z3-aBc">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="pvQ-IG-vUk"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="tableRowLabel" destination="pvQ-IG-vUk" id="oQA-gn-lTn"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="uSE-Hz-UZ2" id="Xdc-P4-iOs"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--mapInterfaceController-->
+        <scene sceneID="JD3-pX-agZ">
+            <objects>
+                <controller identifier="mapInterfaceController" id="Msv-e9-ieD" customClass="mapInterfaceController" customModule="Watch_App_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Label" id="00o-7b-GuC"/>
+                        <map width="1" height="1" alignment="left" id="NEH-Sf-Ibb"/>
+                    </items>
+                    <connections>
+                        <outlet property="map" destination="NEH-Sf-Ibb" id="yjx-o0-fuX"/>
+                        <outlet property="placeLabel" destination="00o-7b-GuC" id="BoC-0C-d4f"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="499" y="347"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Watch_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
